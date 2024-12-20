@@ -2,6 +2,21 @@
 
 A capacitor plugin for contacts
 
+## Setup
+#### iOS
+Apple requires the following usage description to be added and filled out for your app in Info.plist:
+```
+NSContactsUsageDescription (Privacy - Contacts Usage Description)
+```
+Read about Configuring Info.plist in the iOS Guide for more information on setting iOS permissions in Xcode
+
+#### Android
+This API requires the following permissions to be added to your AndroidManifest.xml:
+```
+<!-- Contacts API -->
+<uses-permission android:name="android.permission.READ_CONTACTS" />
+<uses-permission android:name="android.permission.WRITE_CONTACTS" />
+```
 ## Install
 
 ```bash
