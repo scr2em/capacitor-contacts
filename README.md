@@ -14,6 +14,8 @@ npx cap sync
 <docgen-index>
 
 * [`openAddContact(...)`](#openaddcontact)
+* [`checkPermissions()`](#checkpermissions)
+* [`requestPermissions()`](#requestpermissions)
 * [`addListener('contactAdded', ...)`](#addlistenercontactadded-)
 * [Interfaces](#interfaces)
 
@@ -31,6 +33,28 @@ openAddContact(options: { vcardString: string; }) => Promise<void>
 | Param         | Type                                  |
 | ------------- | ------------------------------------- |
 | **`options`** | <code>{ vcardString: string; }</code> |
+
+--------------------
+
+
+### checkPermissions()
+
+```typescript
+checkPermissions() => Promise<{ contacts: boolean; }>
+```
+
+**Returns:** <code>Promise&lt;{ contacts: boolean; }&gt;</code>
+
+--------------------
+
+
+### requestPermissions()
+
+```typescript
+requestPermissions() => Promise<{ contacts: boolean; }>
+```
+
+**Returns:** <code>Promise&lt;{ contacts: boolean; }&gt;</code>
 
 --------------------
 
