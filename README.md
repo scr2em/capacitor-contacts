@@ -33,6 +33,7 @@ npx cap sync
 * [`requestPermissions()`](#requestpermissions)
 * [`addListener('contactAdded', ...)`](#addlistenercontactadded-)
 * [Interfaces](#interfaces)
+* [Type Aliases](#type-aliases)
 
 </docgen-index>
 
@@ -55,10 +56,10 @@ openAddContact(options: { vcardString: string; }) => Promise<void>
 ### checkPermissions()
 
 ```typescript
-checkPermissions() => Promise<{ contacts: boolean; }>
+checkPermissions() => Promise<{ contacts: PermissionState; }>
 ```
 
-**Returns:** <code>Promise&lt;{ contacts: boolean; }&gt;</code>
+**Returns:** <code>Promise&lt;{ contacts: <a href="#permissionstate">PermissionState</a>; }&gt;</code>
 
 --------------------
 
@@ -66,10 +67,10 @@ checkPermissions() => Promise<{ contacts: boolean; }>
 ### requestPermissions()
 
 ```typescript
-requestPermissions() => Promise<{ contacts: boolean; }>
+requestPermissions() => Promise<{ contacts: PermissionState; }>
 ```
 
-**Returns:** <code>Promise&lt;{ contacts: boolean; }&gt;</code>
+**Returns:** <code>Promise&lt;{ contacts: <a href="#permissionstate">PermissionState</a>; }&gt;</code>
 
 --------------------
 
@@ -98,5 +99,13 @@ addListener(eventName: 'contactAdded', listenerFunc: (result: { success: boolean
 | Prop         | Type                                      |
 | ------------ | ----------------------------------------- |
 | **`remove`** | <code>() =&gt; Promise&lt;void&gt;</code> |
+
+
+### Type Aliases
+
+
+#### PermissionState
+
+<code>'prompt' | 'prompt-with-rationale' | 'granted' | 'denied'</code>
 
 </docgen-api>
