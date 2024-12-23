@@ -25,8 +25,6 @@ public class CapacitorContactsPlugin: CAPPlugin, CAPBridgedPlugin, CNContactView
 			permissionState = "prompt"
 		case .restricted, .denied:
 			permissionState = "denied"
-		case .limited:
-			permissionState = "granted"
 		case .authorized:
 			permissionState = "granted"
 		@unknown default:
